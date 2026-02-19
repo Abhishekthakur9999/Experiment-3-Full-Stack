@@ -53,7 +53,7 @@ This is called **Route-Based Lazy Loading**.
 3. Created three route components:
 - Home
 - About
-- Dashboard
+- Contact
 
 4. Applied `React.lazy()` to dynamically import route components.
 
@@ -117,11 +117,11 @@ After clicking "About":
 
 ---
 
-## 4️⃣ Dashboard Page Output
+## 4️⃣ Contact Page Output
 
-After clicking "Dashboard":
+After clicking "Contact":
 
-<img width="1600" height="822" alt="image" src="https://github.com/user-attachments/assets/564eefe0-4b99-4226-bef3-2d3012b02d74" />
+<img width="1916" height="900" alt="image" src="https://github.com/user-attachments/assets/96fc235d-4ff6-4ff7-839b-388d9c993488" />
 
 
 
