@@ -2,14 +2,14 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
-// FORCE DELAY FUNCTION
+// FORCE DELAY FUNCTION (to clearly show lazy loading)
 function delayImport(factory, time) {
   return new Promise((resolve) => {
     setTimeout(() => resolve(factory()), time);
   });
 }
 
-// Lazy Routes with clear delay
+// Lazy Routes with delay
 const Home = React.lazy(() =>
   delayImport(() => import("./pages/Home"), 2000)
 );
@@ -18,8 +18,8 @@ const About = React.lazy(() =>
   delayImport(() => import("./pages/About"), 2000)
 );
 
-const Dashboard = React.lazy(() =>
-  delayImport(() => import("./pages/Dashboard"), 3000)
+const Contact = React.lazy(() =>
+  delayImport(() => import("./pages/Contact"), 3000)
 );
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
         <nav className="nav">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/about" className="nav-link">About</Link>
-          <Link to="/dashboard" className="nav-link">Dashboard</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
         </nav>
 
         <div className="content">
@@ -41,7 +41,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </Suspense>
         </div>
